@@ -21,4 +21,3 @@ RUN POSTGREST_VERSION="9.6.3-alpine" \
 EXPOSE 4848 8080
 #ADD ./html /var/www/html
 CMD payara -D FOREGROUND
-
