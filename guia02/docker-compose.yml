@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  postgres:
+    container_name: psqlalpine-prn335
+    restart: always
+    image: postgres:9.6.3-alpine
+    environment:
+      - POSTGRES_USER:'mortal2017'
+      - POSTGRES_PASSWORD:'prn335'
+      - POSTGRES_DB:'posts'
+    ports:
+      - '5432:5432'
+    volumes:
+      - /home/usuario/Guia2/postgres/post_v2.sql
+      
+  payara:
+    container_name: payara-prn335
+    image: payara/server-full
+    ports:
+      - "4848:4848"
+      - "8080:8080"
+
+  
